@@ -14,14 +14,14 @@ export const useProgressStore = defineStore('progress', () => {
   })
 
   const knownCount = computed(
-    () => Object.values(progress.value).filter((p) => p.status === 'biliyorum').length
+    () => Object.values(progress.value).filter((p) => p.status === 'known').length
   )
   const learningCount = computed(
-    () => Object.values(progress.value).filter((p) => p.status === 'tekrar').length
+    () => Object.values(progress.value).filter((p) => p.status === 'learning').length
   )
   const wordsForReview = computed(() => {
     const today = getTodayISO()
-    return Object.values(progress.value).filter((p) => p.status === 'tekrar' && p.nextReview <= today)
+    return Object.values(progress.value).filter((p) => p.status === 'learning' && p.nextReview <= today)
   })
   const streakDays = computed(() => stats.value.streakDays)
 

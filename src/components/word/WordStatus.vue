@@ -22,8 +22,9 @@ const { t } = useI18n()
 const progressStore = useProgressStore()
 
 const statuses: { value: WordStatus }[] = [
-  { value: 'tekrar' },
-  { value: 'biliyorum' }
+  { value: 'new' },
+  { value: 'learning' },
+  { value: 'known' }
 ]
 
 const current = computed(() => progressStore.progress[props.wordId]?.status ?? null)
@@ -52,12 +53,17 @@ function select(status: WordStatus) {
     background: var(--color-bg-input);
     color: var(--color-text-muted);
 
-    &--tekrar.active {
+    &--new.active {
+      background: rgba(239, 68, 68, 0.15);
+      color: var(--color-new);
+      border-color: var(--color-new);
+    }
+    &--learning.active {
       background: rgba(245, 158, 11, 0.15);
       color: var(--color-learning);
       border-color: var(--color-learning);
     }
-    &--biliyorum.active {
+    &--known.active {
       background: rgba(16, 185, 129, 0.15);
       color: var(--color-known);
       border-color: var(--color-known);

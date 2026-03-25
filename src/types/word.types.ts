@@ -1,4 +1,4 @@
-export type WordStatus = 'tekrar' | 'biliyorum'
+export type WordStatus = 'new' | 'learning' | 'known'
 export type PartOfSpeech = 'noun' | 'verb' | 'adjective' | 'adverb' | 'other'
 
 export interface Word {
