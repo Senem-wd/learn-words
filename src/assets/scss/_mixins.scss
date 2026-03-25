@@ -1,0 +1,70 @@
+@use 'variables' as *;
+
+// ─── Breakpoints ──────────────────────────────────────────────────────────────
+@mixin mobile {
+  @media (max-width: #{$bp-mobile}) { @content; }
+}
+@mixin tablet {
+  @media (max-width: #{$bp-tablet}) { @content; }
+}
+@mixin desktop {
+  @media (min-width: #{$bp-desktop}) { @content; }
+}
+
+// ─── Layout helpers ───────────────────────────────────────────────────────────
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// ─── Soft 3D card ─────────────────────────────────────────────────────────────
+@mixin card {
+  background: var(--color-bg-card);
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  box-shadow:
+    6px 6px 16px rgba(0, 0, 0, 0.08),
+    -4px -4px 12px rgba(255, 255, 255, 0.7);
+}
+
+// Elevated card (more prominent)
+@mixin card-elevated {
+  @include card;
+  box-shadow:
+    10px 10px 24px rgba(0, 0, 0, 0.12),
+    -6px -6px 18px rgba(255, 255, 255, 0.8);
+}
+
+// ─── Neumorphic inset (inputs, pressed state) ─────────────────────────────────
+@mixin inset {
+  background: var(--color-bg-input);
+  border-radius: $radius-sm;
+  box-shadow:
+    inset 3px 3px 8px rgba(0, 0, 0, 0.08),
+    inset -3px -3px 8px rgba(255, 255, 255, 0.6);
+}
+
+// ─── Soft button ──────────────────────────────────────────────────────────────
+@mixin soft-button {
+  border-radius: $radius-full;
+  box-shadow:
+    4px 4px 10px rgba(0, 0, 0, 0.12),
+    -3px -3px 8px rgba(255, 255, 255, 0.7);
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+
+  &:active {
+    transform: scale(0.97);
+    box-shadow:
+      inset 2px 2px 6px rgba(0, 0, 0, 0.12),
+      inset -2px -2px 6px rgba(255, 255, 255, 0.6);
+  }
+}

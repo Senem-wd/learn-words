@@ -1,0 +1,48 @@
+// ─── Soft 3D UI – Color Palette ───────────────────────────────────────────────
+// Primary accent – dusty lavender
+$color-primary: #b8aee8;
+$color-primary-dark: #9b8fd4;
+
+// Status colors – muted, pastel
+$color-success: #a8d5ba;
+$color-warning: #f5c9a0;
+$color-danger: #f0a8a8;
+
+// Word status
+$color-new: #b0bec5;
+$color-learning: #f5c9a0;
+$color-known: #a8d5ba;
+
+// ─── Light theme base ─────────────────────────────────────────────────────────
+$color-bg-light: #f5f0eb;       // warm cream
+$color-bg-card-light: #fdf8f4;  // soft white card
+$color-bg-input-light: #ede8e2; // muted input
+$color-text-light: #4a3f35;     // warm dark brown
+$color-muted-light: #9e9289;
+
+// ─── Dark theme base ──────────────────────────────────────────────────────────
+$color-bg-dark: #2a2530;
+$color-bg-card-dark: #332e3c;
+$color-bg-input-dark: #3d3748;
+$color-text-dark: #ede8e2;
+$color-muted-dark: #9e97ac;
+
+// ─── Spacing ──────────────────────────────────────────────────────────────────
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-2xl: 48px;
+
+// ─── Border radius (very rounded for soft 3D look) ────────────────────────────
+$radius-sm: 12px;
+$radius-md: 20px;
+$radius-lg: 28px;
+$radius-xl: 40px;
+$radius-full: 9999px;
+
+// ─── Breakpoints ──────────────────────────────────────────────────────────────
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;

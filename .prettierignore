@@ -1,0 +1,5 @@
+dist
+dist-ssr
+coverage
+*.min.js
+public/data/words.json

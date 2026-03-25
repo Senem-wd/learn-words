@@ -1,0 +1,76 @@
+@use 'variables' as *;
+@use 'reset';
+@use 'typography';
+
+// ─── CSS custom properties ────────────────────────────────────────────────────
+:root {
+  --color-primary:      #{$color-primary};
+  --color-primary-dark: #{$color-primary-dark};
+  --color-success:      #{$color-success};
+  --color-warning:      #{$color-warning};
+  --color-danger:       #{$color-danger};
+  --color-new:          #{$color-new};
+  --color-learning:     #{$color-learning};
+  --color-known:        #{$color-known};
+}
+
+// ─── Light theme ─────────────────────────────────────────────────────────────
+[data-theme='light'] {
+  --color-bg:       #{$color-bg-light};
+  --color-bg-card:  #{$color-bg-card-light};
+  --color-bg-input: #{$color-bg-input-light};
+  --color-text:     #{$color-text-light};
+  --color-text-muted: #{$color-muted-light};
+  --color-border:   #ddd6ce;
+
+  --shadow-card:
+    6px 6px 16px rgba(163, 148, 135, 0.25),
+    -4px -4px 12px rgba(255, 255, 255, 0.85);
+
+  --shadow-card-elevated:
+    10px 10px 24px rgba(163, 148, 135, 0.3),
+    -6px -6px 18px rgba(255, 255, 255, 0.9);
+
+  --shadow-inset:
+    inset 3px 3px 8px rgba(163, 148, 135, 0.2),
+    inset -3px -3px 8px rgba(255, 255, 255, 0.8);
+
+  --shadow-button:
+    4px 4px 10px rgba(163, 148, 135, 0.3),
+    -3px -3px 8px rgba(255, 255, 255, 0.8);
+}
+
+// ─── Dark theme ──────────────────────────────────────────────────────────────
+[data-theme='dark'] {
+  --color-bg:       #{$color-bg-dark};
+  --color-bg-card:  #{$color-bg-card-dark};
+  --color-bg-input: #{$color-bg-input-dark};
+  --color-text:     #{$color-text-dark};
+  --color-text-muted: #{$color-muted-dark};
+  --color-border:   #4a4455;
+
+  --shadow-card:
+    6px 6px 16px rgba(0, 0, 0, 0.35),
+    -4px -4px 12px rgba(80, 70, 95, 0.25);
+
+  --shadow-card-elevated:
+    10px 10px 24px rgba(0, 0, 0, 0.45),
+    -6px -6px 18px rgba(80, 70, 95, 0.3);
+
+  --shadow-inset:
+    inset 3px 3px 8px rgba(0, 0, 0, 0.3),
+    inset -3px -3px 8px rgba(80, 70, 95, 0.2);
+
+  --shadow-button:
+    4px 4px 10px rgba(0, 0, 0, 0.4),
+    -3px -3px 8px rgba(80, 70, 95, 0.25);
+}
+
+// ─── App shell ────────────────────────────────────────────────────────────────
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
